@@ -7,17 +7,23 @@
 //
 
 import UIKit
-
+// this is navi
 class ViewController: UIViewController, DataDelegate {
     @IBOutlet weak var showImage: UIImageView!
+    
+    @IBOutlet weak var showAddr: UILabel!
+    
+    
     var data = Data()
     
+    
+    
     @IBAction func show(_ sender: UIButton) {
-        data.captureImage()
+        data.findAddr("unimelb")        
     }
     
-    func returnImage(_ image: UIImage?) {
-        showImage.image = image
+    func returnAddr(_ addr: String?) {
+        showAddr.text = addr
     }
     
     override func viewDidLoad() {

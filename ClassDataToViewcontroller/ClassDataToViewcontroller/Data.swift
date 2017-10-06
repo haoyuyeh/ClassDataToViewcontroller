@@ -10,17 +10,20 @@ import UIKit
 
 //MARK: step 1 Add Protoclo here
 protocol DataDelegate: class {
-    func returnImage(_ image: UIImage?)
+    func returnAddr(_ addr: String?)
 }
-
+// this todo
 class Data {
     //MARK: step 2 Create a delegate property here, don't forget to make it weak!
     weak var delegate: DataDelegate?
     let image = UIImage(named: "cat")
     
-    func captureImage() {
+    func findAddr(_ target: String) {
         //MARK: step 3 Add the delegate method call here
-        delegate?.returnImage(image)
+        // compare then find corresponding addr
+        let addr = "swanston street"
+        // return addr to navi
+        delegate?.returnAddr(addr)
     }
 }
 
