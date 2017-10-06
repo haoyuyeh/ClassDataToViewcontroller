@@ -10,7 +10,7 @@ import UIKit
 
 //MARK: step 1 Add Protoclo here
 protocol DataDelegate: class {
-    func returnImage(_ image: UIImage?)
+    func returnImage(_ image: UIImage?) -> String
 }
 
 class Data {
@@ -20,7 +20,9 @@ class Data {
     
     func captureImage() {
         //MARK: step 3 Add the delegate method call here
-        delegate?.returnImage(image)
+        var str = ""
+        str = (delegate?.returnImage(image))!
+        print("Data: \(str)")
     }
 }
 

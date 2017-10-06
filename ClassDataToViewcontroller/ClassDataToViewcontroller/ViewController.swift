@@ -16,8 +16,9 @@ class ViewController: UIViewController, DataDelegate {
         data.captureImage()
     }
     
-    func returnImage(_ image: UIImage?) {
+    func returnImage(_ image: UIImage?) -> String{
         showImage.image = image
+        return "from view controller"
     }
     
     override func viewDidLoad() {
